@@ -1,11 +1,88 @@
 {
   "name": "Gladwyn Anderson",
-  "role": "Designer",
-  "disciplines": ["Developer", "Prototyper", "Animator", "Illustrator", "Modder"],
+  "role": "Developer",
+  "disciplines": ["Blockchain", "Full-stack", "Frontend", "Backend"],
   "url": "https://hamishw.com",
   "bluesky": "hamishw.com",
   "figma": "@Hamish",
-  "github": "HamishMW",
-  "repo": "https://github.com/HamishMW/portfolio",
-  "ascii": "__  __  __\n\u005C \u005C \u005C \u005C \u005C\u2215\n \u005C \u005C\u2215\u005C \u005C\n  \u005C\u2215  \u005C\u2215\n"
+  "github": "smartdev00",
+  "repo": "https://github.com/smartdev00/portfolio",
+  "ascii": "__  __  __\n\u005C \u005C \u005C \u005C \u005C\u2215\n \u005C \u005C\u2215\u005C \u005C\n  \u005C\u2215  \u005C\u2215\n",
+  "skills": [
+    { "skill": "React / Next.js / Vue.js", "type": "frontend" },
+    { "skill": "Redux", "type": "frontend" },
+    { "skill": "Zustand / Jotai", "type": "frontend" },
+    { "skill": "HTML / CSS", "type": "frontend" },
+    { "skill": "Tailwind CSS / Boodstrap", "type": "frontend" },
+    { "skill": "Framer / GSAP", "type": "frontend" },
+
+    { "skill": "Typescript / JavaScript", "type": "backend" },
+    { "skill": "Node.js / ExpressJs", "type": "backend" },
+    { "skill": "Python / Flask / Django", "type": "backend" },
+    { "skill": "Golang / Gin / Gorm", "type": "backend" },
+    { "skill": "MongoDB / DynamoDB", "type": "backend" },
+    { "skill": "MySQL / PostgreSQL", "type": "backend" },
+    { "skill": "Redis", "type": "backend" },
+    { "skill": "Restful API / GraphQL", "type": "backend" },
+
+    { "skill": "Solana / EVM", "type": "blockchain" },
+    { "skill": "Rust / Anchor", "type": "blockchain" },
+    { "skill": "SPL / Token 2022 / NFT", "type": "blockchain" },
+    { "skill": "Solidity / Hardhat", "type": "blockchain" },
+    { "skill": "ERC20 / ERC721 / ERC1155", "type": "blockchain" },
+    { "skill": "Ethers.js / Web3.js", "type": "blockchain" },
+    { "skill": "Jupiter / Raydium / Orca", "type": "blockchain" },
+
+    { "skill": "AWS Lambda / EC2", "type": "extra" },
+    { "skill": "Docker / K8s", "type": "extra" },
+    { "skill": "DevOps / CI/CD", "type": "extra" },
+    { "skill": "GitHub / Gitlab", "type": "extra" },
+    { "skill": "Jira / Kanban", "type": "extra" }
+  ],
+  "experience": [
+    {
+      "name": "Kalamuna",
+      "location": "Oakland, United States",
+      "period": "12/2023 - 01/2025",
+      "position": "Senior Software Engineer",
+      "url": "kalamuna.com",
+      "role": [
+        "Improved responsive designs that were pixel-perfect, ensuring an optimal user experience across different devices and browsers",
+        "Worked closely with back-end developers to define and integrate RESTful APIs, facilitating smooth data exchange between the front-end and back-end systems"
+      ]
+    },
+    {
+      "name": "Vivim",
+      "location": "Los Angeles, United States",
+      "period": "02/2022 - 08/2023",
+      "position": "Senior Full Stack & Web3 Developer",
+      "url": "vivim.net",
+      "role": [
+        "Improved responsive designs that were pixel-perfect, ensuring an optimal user experience across different devices and browsers",
+        "Worked closely with back-end developers to define and integrate RESTful APIs, facilitating smooth data exchange between the front-end and back-end systems"
+      ]
+    },
+    {
+      "name": "Valiant",
+      "location": "Singapore, Singapore",
+      "period": "07/2019 - 12/2021",
+      "position": "Full Stack Developer",
+      "url": "valiantsolutions.com",
+      "role": [
+        "Improved responsive designs that were pixel-perfect, ensuring an optimal user experience across different devices and browsers",
+        "Worked closely with back-end developers to define and integrate RESTful APIs, facilitating smooth data exchange between the front-end and back-end systems"
+      ]
+    },
+    {
+      "name": "Hiyield",
+      "location": "Singapore, Singapore",
+      "period": "02/2017 - 06/2019",
+      "position": "Frontend Developer",
+      "url": "hiyield.co.uk",
+      "role": [
+        "Improved responsive designs that were pixel-perfect, ensuring an optimal user experience across different devices and browsers",
+        "Worked closely with back-end developers to define and integrate RESTful APIs, facilitating smooth data exchange between the front-end and back-end systems"
+      ]
+    }
+  ]
 }

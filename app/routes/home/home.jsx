@@ -10,14 +10,17 @@ import sliceTexture from '~/assets/slice-app.jpg';
 import sprTextureLarge from '~/assets/spr-lesson-builder-dark-large.jpg';
 import sprTexturePlaceholder from '~/assets/spr-lesson-builder-dark-placeholder.jpg';
 import sprTexture from '~/assets/spr-lesson-builder-dark.jpg';
+import resumeTexture from '~/assets/resume.jpg';
 import { Footer } from '~/components/footer';
 import { baseMeta } from '~/utils/meta';
 import { Intro } from './intro';
 import { Profile } from './profile';
 import { ProjectSummary } from './project-summary';
+import { Resume } from './resume';
 import { useEffect, useRef, useState } from 'react';
 import config from '~/config.json';
 import styles from './home.module.css';
+import { Skills } from './skills';
 
 // Prefetch draco decoader wasm
 export const links = () => {
@@ -50,13 +53,15 @@ export const Home = () => {
   const [visibleSections, setVisibleSections] = useState([]);
   const [scrollIndicatorHidden, setScrollIndicatorHidden] = useState(false);
   const intro = useRef();
+  const resume = useRef();
   const projectOne = useRef();
   const projectTwo = useRef();
   const projectThree = useRef();
   const details = useRef();
+  const skills = useRef();
 
   useEffect(() => {
-    const sections = [intro, projectOne, projectTwo, projectThree, details];
+    const sections = [intro, resume, projectOne, projectTwo, projectThree, details, skills];
 
     const sectionObserver = new IntersectionObserver(
       (entries, observer) => {
@@ -97,6 +102,36 @@ export const Home = () => {
         id="intro"
         sectionRef={intro}
         scrollIndicatorHidden={scrollIndicatorHidden}
+      />
+      <Profile
+        sectionRef={details}
+        visible={visibleSections.includes(details.current)}
+        id="details"
+      />
+      <Skills
+        id="skills"
+        sectionRef={skills}
+        visible={visibleSections.includes(skills.current)}
+      />
+      <Resume
+        id="project-1"
+        sectionRef={resume}
+        visible={visibleSections.includes(resume.current)}
+        index={1}
+        title="Designing the future of education"
+        description="Designing a platform to help educators build better online courseware"
+        buttonText="View resume"
+        buttonLink="https://drive.google.com/file/d/18m5PX-cN3mpe7riBy198uxPowhKXoCc7/view"
+        model={{
+          type: 'laptop',
+          alt: 'Smart Sparrow lesson builder',
+          textures: [
+            {
+              srcSet: `${resumeTexture} 1280w, ${resumeTexture} 2560w`,
+              placeholder: sprTexturePlaceholder,
+            },
+          ],
+        }}
       />
       <ProjectSummary
         id="project-1"
@@ -162,11 +197,6 @@ export const Home = () => {
             },
           ],
         }}
-      />
-      <Profile
-        sectionRef={details}
-        visible={visibleSections.includes(details.current)}
-        id="details"
       />
       <Footer />
     </div>
