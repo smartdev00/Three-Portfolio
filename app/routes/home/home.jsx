@@ -7,17 +7,20 @@ import gamestackTexture from '~/assets/gamestack-login.jpg';
 import sliceTextureLarge from '~/assets/slice-app-large.jpg';
 import sliceTexturePlaceholder from '~/assets/slice-app-placeholder.jpg';
 import sliceTexture from '~/assets/slice-app.jpg';
-import sprTextureLarge from '~/assets/spr-lesson-builder-dark-large.jpg';
 import sprTexturePlaceholder from '~/assets/spr-lesson-builder-dark-placeholder.jpg';
-import sprTexture from '~/assets/spr-lesson-builder-dark.jpg';
+import sprTexture from '~/assets/token-creation.jpg';
+import job3Texture from '~/assets/job3.jpg';
+import resumeTexture from '~/assets/resume.jpg';
 import { Footer } from '~/components/footer';
 import { baseMeta } from '~/utils/meta';
 import { Intro } from './intro';
 import { Profile } from './profile';
 import { ProjectSummary } from './project-summary';
+import { Resume } from './resume';
 import { useEffect, useRef, useState } from 'react';
 import config from '~/config.json';
 import styles from './home.module.css';
+import { Skills } from './skills';
 
 // Prefetch draco decoader wasm
 export const links = () => {
@@ -50,13 +53,15 @@ export const Home = () => {
   const [visibleSections, setVisibleSections] = useState([]);
   const [scrollIndicatorHidden, setScrollIndicatorHidden] = useState(false);
   const intro = useRef();
+  const resume = useRef();
   const projectOne = useRef();
   const projectTwo = useRef();
   const projectThree = useRef();
   const details = useRef();
+  const skills = useRef();
 
   useEffect(() => {
-    const sections = [intro, projectOne, projectTwo, projectThree, details];
+    const sections = [intro, resume, projectOne, projectTwo, projectThree, details, skills];
 
     const sectionObserver = new IntersectionObserver(
       (entries, observer) => {
@@ -98,21 +103,51 @@ export const Home = () => {
         sectionRef={intro}
         scrollIndicatorHidden={scrollIndicatorHidden}
       />
-      <ProjectSummary
+      <Profile
+        sectionRef={details}
+        visible={visibleSections.includes(details.current)}
+        id="details"
+      />
+      <Skills
+        id="skills"
+        sectionRef={skills}
+        visible={visibleSections.includes(skills.current)}
+      />
+      <Resume
         id="project-1"
-        sectionRef={projectOne}
-        visible={visibleSections.includes(projectOne.current)}
+        sectionRef={resume}
+        visible={visibleSections.includes(resume.current)}
         index={1}
         title="Designing the future of education"
         description="Designing a platform to help educators build better online courseware"
-        buttonText="View project"
-        buttonLink="/projects/smart-sparrow"
+        buttonText="View resume"
+        buttonLink="https://drive.google.com/file/d/18m5PX-cN3mpe7riBy198uxPowhKXoCc7/view"
         model={{
           type: 'laptop',
           alt: 'Smart Sparrow lesson builder',
           textures: [
             {
-              srcSet: `${sprTexture} 1280w, ${sprTextureLarge} 2560w`,
+              srcSet: `${resumeTexture} 1280w, ${resumeTexture} 2560w`,
+              placeholder: sprTexturePlaceholder,
+            },
+          ],
+        }}
+      />
+      <ProjectSummary
+        id="project-1"
+        sectionRef={projectOne}
+        visible={visibleSections.includes(projectOne.current)}
+        index={1}
+        title="Solana Token Creation Platform"
+        description="Platform enables users to create token on Solana by clicking and inputing withoud code"
+        buttonText="View project"
+        buttonLink="https://solana-token-creation-platform.vercel.app"
+        model={{
+          type: 'laptop',
+          alt: 'Smart Sparrow lesson builder',
+          textures: [
+            {
+              srcSet: `${sprTexture} 1280w, ${sprTexture} 2560w`,
               placeholder: sprTexturePlaceholder,
             },
           ],
@@ -148,25 +183,20 @@ export const Home = () => {
         sectionRef={projectThree}
         visible={visibleSections.includes(projectThree.current)}
         index={3}
-        title="Biomedical image collaboration"
-        description="Increasing the amount of collaboration in Slice, an app for biomedical imaging"
+        title="Job Market Place"
+        description="Platform enables employers post job openings and job seekers search for and apply jobs."
         buttonText="View project"
-        buttonLink="/projects/slice"
+        buttonLink="https://jobs3.io"
         model={{
           type: 'laptop',
           alt: 'Annotating a biomedical image in the Slice app',
           textures: [
             {
-              srcSet: `${sliceTexture} 800w, ${sliceTextureLarge} 1920w`,
+              srcSet: `${job3Texture} 800w, ${job3Texture} 1920w`,
               placeholder: sliceTexturePlaceholder,
             },
           ],
         }}
-      />
-      <Profile
-        sectionRef={details}
-        visible={visibleSections.includes(details.current)}
-        id="details"
       />
       <Footer />
     </div>

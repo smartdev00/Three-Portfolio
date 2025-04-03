@@ -21,16 +21,13 @@ const ProfileText = ({ visible, titleId }) => (
       <DecoderText text="Hi there" start={visible} delay={500} />
     </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      I’m Hamish, currently I live in Sydney working as a senior product designer at{' '}
-      <Link href="https://www.qwilr.com">Qwilr</Link>. My projects include UX design, UI
-      animations, and icon illustration. Being comfortable with code allows me to rapidly
-      prototype and validate experiences. If you’re interested in the tools and software I
-      use check out my <Link href="/uses">uses page</Link>.
-    </Text>
-    <Text className={styles.description} data-visible={visible} size="l" as="p">
-      In my spare time I like to practice Brazilian Jiu Jitsu, play video games, and{' '}
-      <Link href="/projects/volkihar-knight">make mods</Link>. I’m always down for hearing
-      about new projects, so feel free to drop me a line.
+      I build things that work—whether it’s a sleek frontend, a robust backend, or a
+      decentralized app on Ethereum or Solana. I’ve crafted user-friendly interfaces with
+      Next.js and Vue.js, built scalable systems with Node.js and GraphQL, and developed
+      smart contracts and dApps that deliver real value. What drives me is solving real
+      problems—optimizing performance, ensuring security, and creating seamless user
+      experiences. I’ve also led teams, mentored developers, and delivered projects from
+      start to finish. Let’s build something great together!
     </Text>
   </Fragment>
 );

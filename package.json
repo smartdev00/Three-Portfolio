@@ -2,7 +2,7 @@
   "name": "portfolio",
   "homepage": "https://hamishw.com",
   "description": "Portfolio site for Gladwyn Anderson",
-  "repository": "https://github.com/HamishMW/portfolio.git",
+  "repository": "https://github.com/smartdev00/portfolio.git",
   "author": "Gladwyn Anderson",
   "sideEffects": false,
   "type": "module",
