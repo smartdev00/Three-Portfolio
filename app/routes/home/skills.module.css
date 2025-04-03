@@ -1,6 +1,5 @@
 .profile {
   width: 100vw;
-  min-height: 100vh;
   margin-top: 60px;
   margin-bottom: 40px;
   padding-top: 60px;
@@ -157,7 +156,7 @@
   transition: opacity var(--durationXL) ease var(--durationL);
   padding: 4px 20px;
   color: var(--text);
-  border: 2px solid var(--text);
+  border: 1px solid var(--text);
   border-radius: 999px;
   border-style: dashed;
   overflow: hidden;

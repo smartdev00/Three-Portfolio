@@ -1,7 +1,6 @@
 .summary {
-  height: 100vh;
   width: 100%;
-  max-height: 1080px;
+  /* max-height: 1080px; */
   padding-bottom: var(--spaceL);
   /* margin: 40px 0; */
   position: relative;
