@@ -10,6 +10,7 @@ import remarkMdxFrontmatter from 'remark-mdx-frontmatter';
 import rehypeImgSize from 'rehype-img-size';
 import rehypeSlug from 'rehype-slug';
 import rehypePrism from '@mapbox/rehype-prism';
+import { vercelPreset } from '@vercel/remix/vite';
 
 export default defineConfig({
   assetsInclude: ['**/*.glb', '**/*.hdr', '**/*.glsl'],
@@ -32,6 +33,7 @@ export default defineConfig({
           route('/', 'routes/home/route.js', { index: true });
         });
       },
+      presets: [vercelPreset()],
     }),
     jsconfigPaths(),
   ],
